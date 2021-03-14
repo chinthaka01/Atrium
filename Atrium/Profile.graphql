@@ -1,0 +1,5 @@
+query GetProfileData($login: String!) {
+  user(login : $login) {
+    ...ProfileDetails
+  }
+}

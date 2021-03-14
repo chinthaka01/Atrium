@@ -1,0 +1,918 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		290F25973D3C108A75968EF4 /* Pods_Atrium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A5445925D119F591A43547 /* Pods_Atrium.framework */; };
+		2B325F5025FE4E36000F9D41 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B325F4F25FE4E36000F9D41 /* UserDefaultsExtension.swift */; };
+		2B325F5525FE501D000F9D41 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B325F5425FE501D000F9D41 /* AppConstants.swift */; };
+		2B325F6C25FE5A99000F9D41 /* ProfileRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B325F6B25FE5A99000F9D41 /* ProfileRetriever.swift */; };
+		2B325F7A25FE7D46000F9D41 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B325F7925FE7D46000F9D41 /* UIImageViewExtension.swift */; };
+		2B325F7F25FE83C5000F9D41 /* ProfileRetrieverDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B325F7E25FE83C5000F9D41 /* ProfileRetrieverDelegate.swift */; };
+		2B7B1F8525FA1ECD002D3ECD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B1F8425FA1ECD002D3ECD /* AppDelegate.swift */; };
+		2B7B1F8725FA1ECD002D3ECD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B1F8625FA1ECD002D3ECD /* SceneDelegate.swift */; };
+		2B7B1F8925FA1ECD002D3ECD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B1F8825FA1ECD002D3ECD /* ProfileViewController.swift */; };
+		2B7B1F9125FA1ECE002D3ECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B7B1F9025FA1ECE002D3ECD /* Assets.xcassets */; };
+		2B7B1F9425FA1ECE002D3ECD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7B1F9225FA1ECE002D3ECD /* LaunchScreen.storyboard */; };
+		2B7B1F9F25FA1ECE002D3ECD /* AtriumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B1F9E25FA1ECE002D3ECD /* AtriumTests.swift */; };
+		2B7B1FAA25FA1ECE002D3ECD /* AtriumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B1FA925FA1ECE002D3ECD /* AtriumUITests.swift */; };
+		2B7B1FE525FA3EB3002D3ECD /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B1FE425FA3EB3002D3ECD /* ProfileHeaderView.swift */; };
+		2B808F2225FB912900FDDE06 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B808F2125FB912900FDDE06 /* NetworkService.swift */; };
+		2B820D9325FBDDD8007DB2C5 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 2B820D9225FBDDD8007DB2C5 /* Apollo */; };
+		2B820D9525FBDDD8007DB2C5 /* ApolloSQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 2B820D9425FBDDD8007DB2C5 /* ApolloSQLite */; };
+		2B820DAA25FBF228007DB2C5 /* Profile.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 2B820DA925FBF228007DB2C5 /* Profile.graphql */; };
+		2B820DBB25FBF567007DB2C5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B820DBA25FBF567007DB2C5 /* API.swift */; };
+		2B820DCA25FCCD73007DB2C5 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B820DC925FCCD73007DB2C5 /* ProfilePresenter.swift */; };
+		2B820DE025FCD52C007DB2C5 /* ProfileViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B820DDF25FCD52C007DB2C5 /* ProfileViewControllerDelegate.swift */; };
+		2B820DE525FCEBD3007DB2C5 /* SectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B820DE425FCEBD3007DB2C5 /* SectionViewDelegate.swift */; };
+		2BC5775725FA493000913BCB /* PinnedRepositoriesSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5775625FA493000913BCB /* PinnedRepositoriesSectionView.swift */; };
+		2BC5775C25FA496100913BCB /* TopRepositoriesSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5775B25FA496100913BCB /* TopRepositoriesSectionView.swift */; };
+		2BC5776125FA498900913BCB /* StarredRepositoriesSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5776025FA498900913BCB /* StarredRepositoriesSectionView.swift */; };
+		2BC5776725FA49DB00913BCB /* RepositoryTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5776625FA49DB00913BCB /* RepositoryTileView.swift */; };
+		2BFBFFEB25FAB5B80044E828 /* ProfileSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFBFFEA25FAB5B80044E828 /* ProfileSectionHeaderView.swift */; };
+		2BFBFFF225FAC9650044E828 /* RepositoryTileViewTopComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFBFFF125FAC9650044E828 /* RepositoryTileViewTopComponent.swift */; };
+		2BFBFFF725FAC97F0044E828 /* RepositoryTileViewBottomComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFBFFF625FAC97F0044E828 /* RepositoryTileViewBottomComponent.swift */; };
+		BE5CFF9DE7D15EE8EC3C6F30 /* Pods_Atrium_AtriumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1A68B81ACC320359C7609F /* Pods_Atrium_AtriumUITests.framework */; };
+		DD1DFE0B76953E8FE91D4F2B /* Pods_AtriumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96505B0ED9FDE36AAD31F8FC /* Pods_AtriumTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B7B1F9B25FA1ECE002D3ECD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B7B1F7925FA1ECD002D3ECD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B7B1F8025FA1ECD002D3ECD;
+			remoteInfo = Atrium;
+		};
+		2B7B1FA625FA1ECE002D3ECD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B7B1F7925FA1ECD002D3ECD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B7B1F8025FA1ECD002D3ECD;
+			remoteInfo = Atrium;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B325F4F25FE4E36000F9D41 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
+		2B325F5425FE501D000F9D41 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		2B325F6B25FE5A99000F9D41 /* ProfileRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRetriever.swift; sourceTree = "<group>"; };
+		2B325F7925FE7D46000F9D41 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		2B325F7E25FE83C5000F9D41 /* ProfileRetrieverDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRetrieverDelegate.swift; sourceTree = "<group>"; };
+		2B7B1F8125FA1ECD002D3ECD /* Atrium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atrium.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B7B1F8425FA1ECD002D3ECD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B7B1F8625FA1ECD002D3ECD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2B7B1F8825FA1ECD002D3ECD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2B7B1F9025FA1ECE002D3ECD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B7B1F9325FA1ECE002D3ECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B7B1F9525FA1ECE002D3ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B7B1F9A25FA1ECE002D3ECD /* AtriumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtriumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B7B1F9E25FA1ECE002D3ECD /* AtriumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtriumTests.swift; sourceTree = "<group>"; };
+		2B7B1FA025FA1ECE002D3ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B7B1FA525FA1ECE002D3ECD /* AtriumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtriumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B7B1FA925FA1ECE002D3ECD /* AtriumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtriumUITests.swift; sourceTree = "<group>"; };
+		2B7B1FAB25FA1ECE002D3ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B7B1FE425FA3EB3002D3ECD /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		2B808F1725FB890500FDDE06 /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		2B808F2125FB912900FDDE06 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2B820DA925FBF228007DB2C5 /* Profile.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Profile.graphql; sourceTree = "<group>"; };
+		2B820DBA25FBF567007DB2C5 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		2B820DC925FCCD73007DB2C5 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		2B820DDF25FCD52C007DB2C5 /* ProfileViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerDelegate.swift; sourceTree = "<group>"; };
+		2B820DE425FCEBD3007DB2C5 /* SectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewDelegate.swift; sourceTree = "<group>"; };
+		2B820DF125FD3860007DB2C5 /* ProfileDetails.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = ProfileDetails.graphql; sourceTree = "<group>"; };
+		2BC5775625FA493000913BCB /* PinnedRepositoriesSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedRepositoriesSectionView.swift; sourceTree = "<group>"; };
+		2BC5775B25FA496100913BCB /* TopRepositoriesSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRepositoriesSectionView.swift; sourceTree = "<group>"; };
+		2BC5776025FA498900913BCB /* StarredRepositoriesSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredRepositoriesSectionView.swift; sourceTree = "<group>"; };
+		2BC5776625FA49DB00913BCB /* RepositoryTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTileView.swift; sourceTree = "<group>"; };
+		2BFBFFEA25FAB5B80044E828 /* ProfileSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSectionHeaderView.swift; sourceTree = "<group>"; };
+		2BFBFFF125FAC9650044E828 /* RepositoryTileViewTopComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTileViewTopComponent.swift; sourceTree = "<group>"; };
+		2BFBFFF625FAC97F0044E828 /* RepositoryTileViewBottomComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTileViewBottomComponent.swift; sourceTree = "<group>"; };
+		313F9121A453BB07F49D80A0 /* Pods-AtriumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AtriumTests.debug.xcconfig"; path = "Target Support Files/Pods-AtriumTests/Pods-AtriumTests.debug.xcconfig"; sourceTree = "<group>"; };
+		38A5445925D119F591A43547 /* Pods_Atrium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Atrium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68050D6F0883879641832F35 /* Pods-Atrium-AtriumUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Atrium-AtriumUITests.release.xcconfig"; path = "Target Support Files/Pods-Atrium-AtriumUITests/Pods-Atrium-AtriumUITests.release.xcconfig"; sourceTree = "<group>"; };
+		70BA3769CD20DD734824EEC0 /* Pods-Atrium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Atrium.release.xcconfig"; path = "Target Support Files/Pods-Atrium/Pods-Atrium.release.xcconfig"; sourceTree = "<group>"; };
+		96505B0ED9FDE36AAD31F8FC /* Pods_AtriumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AtriumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0CFF807D919164D77F3C873 /* Pods-Atrium.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Atrium.debug.xcconfig"; path = "Target Support Files/Pods-Atrium/Pods-Atrium.debug.xcconfig"; sourceTree = "<group>"; };
+		B63E3A584B09D7A38D533DEA /* Pods-Atrium-AtriumUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Atrium-AtriumUITests.debug.xcconfig"; path = "Target Support Files/Pods-Atrium-AtriumUITests/Pods-Atrium-AtriumUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DF1A68B81ACC320359C7609F /* Pods_Atrium_AtriumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Atrium_AtriumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2B009C960E3601D1122FD3C /* Pods-AtriumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AtriumTests.release.xcconfig"; path = "Target Support Files/Pods-AtriumTests/Pods-AtriumTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B7B1F7E25FA1ECD002D3ECD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				290F25973D3C108A75968EF4 /* Pods_Atrium.framework in Frameworks */,
+				2B820D9325FBDDD8007DB2C5 /* Apollo in Frameworks */,
+				2B820D9525FBDDD8007DB2C5 /* ApolloSQLite in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B7B1F9725FA1ECE002D3ECD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD1DFE0B76953E8FE91D4F2B /* Pods_AtriumTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B7B1FA225FA1ECE002D3ECD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE5CFF9DE7D15EE8EC3C6F30 /* Pods_Atrium_AtriumUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B325F5925FE589A000F9D41 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2B325F4F25FE4E36000F9D41 /* UserDefaultsExtension.swift */,
+				2B325F7925FE7D46000F9D41 /* UIImageViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2B7B1F7825FA1ECD002D3ECD = {
+			isa = PBXGroup;
+			children = (
+				2B7B1F8325FA1ECD002D3ECD /* Atrium */,
+				2B7B1F9D25FA1ECE002D3ECD /* AtriumTests */,
+				2B7B1FA825FA1ECE002D3ECD /* AtriumUITests */,
+				2B7B1F8225FA1ECD002D3ECD /* Products */,
+				69750C12EBCDEA59840379A1 /* Pods */,
+				CF43AE07615930E813F15378 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2B7B1F8225FA1ECD002D3ECD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B7B1F8125FA1ECD002D3ECD /* Atrium.app */,
+				2B7B1F9A25FA1ECE002D3ECD /* AtriumTests.xctest */,
+				2B7B1FA525FA1ECE002D3ECD /* AtriumUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B7B1F8325FA1ECD002D3ECD /* Atrium */ = {
+			isa = PBXGroup;
+			children = (
+				2B325F5925FE589A000F9D41 /* Extensions */,
+				2B7B1FD425FA3608002D3ECD /* Presenters */,
+				2B7B1FD325FA35FF002D3ECD /* Views */,
+				2B7B1FD225FA35F2002D3ECD /* Models */,
+				2B7B1F8425FA1ECD002D3ECD /* AppDelegate.swift */,
+				2B7B1F8625FA1ECD002D3ECD /* SceneDelegate.swift */,
+				2B7B1F9025FA1ECE002D3ECD /* Assets.xcassets */,
+				2B7B1F9225FA1ECE002D3ECD /* LaunchScreen.storyboard */,
+				2B7B1F9525FA1ECE002D3ECD /* Info.plist */,
+				2B808F1725FB890500FDDE06 /* schema.json */,
+				2B820DA925FBF228007DB2C5 /* Profile.graphql */,
+				2B820DBA25FBF567007DB2C5 /* API.swift */,
+				2B820DF125FD3860007DB2C5 /* ProfileDetails.graphql */,
+				2B325F5425FE501D000F9D41 /* AppConstants.swift */,
+			);
+			path = Atrium;
+			sourceTree = "<group>";
+		};
+		2B7B1F9D25FA1ECE002D3ECD /* AtriumTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B7B1F9E25FA1ECE002D3ECD /* AtriumTests.swift */,
+				2B7B1FA025FA1ECE002D3ECD /* Info.plist */,
+			);
+			path = AtriumTests;
+			sourceTree = "<group>";
+		};
+		2B7B1FA825FA1ECE002D3ECD /* AtriumUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2B7B1FA925FA1ECE002D3ECD /* AtriumUITests.swift */,
+				2B7B1FAB25FA1ECE002D3ECD /* Info.plist */,
+			);
+			path = AtriumUITests;
+			sourceTree = "<group>";
+		};
+		2B7B1FD225FA35F2002D3ECD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B808F2125FB912900FDDE06 /* NetworkService.swift */,
+				2B325F6B25FE5A99000F9D41 /* ProfileRetriever.swift */,
+				2B325F7E25FE83C5000F9D41 /* ProfileRetrieverDelegate.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2B7B1FD325FA35FF002D3ECD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2BC5776525FA49B000913BCB /* TileViews */,
+				2B7B1FD825FA3689002D3ECD /* Profile */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2B7B1FD425FA3608002D3ECD /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				2B820DC925FCCD73007DB2C5 /* ProfilePresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		2B7B1FD825FA3689002D3ECD /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2B7B1FDB25FA3723002D3ECD /* SectionHeaderViews */,
+				2B7B1FD925FA369C002D3ECD /* SectionViews */,
+				2B7B1F8825FA1ECD002D3ECD /* ProfileViewController.swift */,
+				2B820DDF25FCD52C007DB2C5 /* ProfileViewControllerDelegate.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		2B7B1FD925FA369C002D3ECD /* SectionViews */ = {
+			isa = PBXGroup;
+			children = (
+				2B7B1FE425FA3EB3002D3ECD /* ProfileHeaderView.swift */,
+				2BC5775625FA493000913BCB /* PinnedRepositoriesSectionView.swift */,
+				2BC5775B25FA496100913BCB /* TopRepositoriesSectionView.swift */,
+				2BC5776025FA498900913BCB /* StarredRepositoriesSectionView.swift */,
+				2B820DE425FCEBD3007DB2C5 /* SectionViewDelegate.swift */,
+			);
+			path = SectionViews;
+			sourceTree = "<group>";
+		};
+		2B7B1FDB25FA3723002D3ECD /* SectionHeaderViews */ = {
+			isa = PBXGroup;
+			children = (
+				2BFBFFEA25FAB5B80044E828 /* ProfileSectionHeaderView.swift */,
+			);
+			path = SectionHeaderViews;
+			sourceTree = "<group>";
+		};
+		2BC5776525FA49B000913BCB /* TileViews */ = {
+			isa = PBXGroup;
+			children = (
+				2BFBFFEF25FAC9120044E828 /* TileViewComponents */,
+				2BC5776625FA49DB00913BCB /* RepositoryTileView.swift */,
+			);
+			path = TileViews;
+			sourceTree = "<group>";
+		};
+		2BFBFFEF25FAC9120044E828 /* TileViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				2BFBFFF025FAC92D0044E828 /* Repository */,
+			);
+			path = TileViewComponents;
+			sourceTree = "<group>";
+		};
+		2BFBFFF025FAC92D0044E828 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2BFBFFF125FAC9650044E828 /* RepositoryTileViewTopComponent.swift */,
+				2BFBFFF625FAC97F0044E828 /* RepositoryTileViewBottomComponent.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		69750C12EBCDEA59840379A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0CFF807D919164D77F3C873 /* Pods-Atrium.debug.xcconfig */,
+				70BA3769CD20DD734824EEC0 /* Pods-Atrium.release.xcconfig */,
+				B63E3A584B09D7A38D533DEA /* Pods-Atrium-AtriumUITests.debug.xcconfig */,
+				68050D6F0883879641832F35 /* Pods-Atrium-AtriumUITests.release.xcconfig */,
+				313F9121A453BB07F49D80A0 /* Pods-AtriumTests.debug.xcconfig */,
+				E2B009C960E3601D1122FD3C /* Pods-AtriumTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CF43AE07615930E813F15378 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38A5445925D119F591A43547 /* Pods_Atrium.framework */,
+				DF1A68B81ACC320359C7609F /* Pods_Atrium_AtriumUITests.framework */,
+				96505B0ED9FDE36AAD31F8FC /* Pods_AtriumTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B7B1F8025FA1ECD002D3ECD /* Atrium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B7B1FAE25FA1ECE002D3ECD /* Build configuration list for PBXNativeTarget "Atrium" */;
+			buildPhases = (
+				2BA246B625FB71F80061E41A /* Apollo CLI */,
+				2B881A81E81572E7BEAADA30 /* [CP] Check Pods Manifest.lock */,
+				2B7B1F7D25FA1ECD002D3ECD /* Sources */,
+				2B7B1F7E25FA1ECD002D3ECD /* Frameworks */,
+				2B7B1F7F25FA1ECD002D3ECD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Atrium;
+			packageProductDependencies = (
+				2B820D9225FBDDD8007DB2C5 /* Apollo */,
+				2B820D9425FBDDD8007DB2C5 /* ApolloSQLite */,
+			);
+			productName = Atrium;
+			productReference = 2B7B1F8125FA1ECD002D3ECD /* Atrium.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B7B1F9925FA1ECE002D3ECD /* AtriumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B7B1FB125FA1ECE002D3ECD /* Build configuration list for PBXNativeTarget "AtriumTests" */;
+			buildPhases = (
+				DDDF722C8D953D8A7AF7DA8E /* [CP] Check Pods Manifest.lock */,
+				2B7B1F9625FA1ECE002D3ECD /* Sources */,
+				2B7B1F9725FA1ECE002D3ECD /* Frameworks */,
+				2B7B1F9825FA1ECE002D3ECD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B7B1F9C25FA1ECE002D3ECD /* PBXTargetDependency */,
+			);
+			name = AtriumTests;
+			productName = AtriumTests;
+			productReference = 2B7B1F9A25FA1ECE002D3ECD /* AtriumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2B7B1FA425FA1ECE002D3ECD /* AtriumUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B7B1FB425FA1ECE002D3ECD /* Build configuration list for PBXNativeTarget "AtriumUITests" */;
+			buildPhases = (
+				1D870EF4507EFF951C161AB1 /* [CP] Check Pods Manifest.lock */,
+				2B7B1FA125FA1ECE002D3ECD /* Sources */,
+				2B7B1FA225FA1ECE002D3ECD /* Frameworks */,
+				2B7B1FA325FA1ECE002D3ECD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B7B1FA725FA1ECE002D3ECD /* PBXTargetDependency */,
+			);
+			name = AtriumUITests;
+			productName = AtriumUITests;
+			productReference = 2B7B1FA525FA1ECE002D3ECD /* AtriumUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B7B1F7925FA1ECD002D3ECD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					2B7B1F8025FA1ECD002D3ECD = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					2B7B1F9925FA1ECE002D3ECD = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 2B7B1F8025FA1ECD002D3ECD;
+					};
+					2B7B1FA425FA1ECE002D3ECD = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 2B7B1F8025FA1ECD002D3ECD;
+					};
+				};
+			};
+			buildConfigurationList = 2B7B1F7C25FA1ECD002D3ECD /* Build configuration list for PBXProject "Atrium" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B7B1F7825FA1ECD002D3ECD;
+			packageReferences = (
+				2B820D9125FBDDD8007DB2C5 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
+			productRefGroup = 2B7B1F8225FA1ECD002D3ECD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B7B1F8025FA1ECD002D3ECD /* Atrium */,
+				2B7B1F9925FA1ECE002D3ECD /* AtriumTests */,
+				2B7B1FA425FA1ECE002D3ECD /* AtriumUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B7B1F7F25FA1ECD002D3ECD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B820DAA25FBF228007DB2C5 /* Profile.graphql in Resources */,
+				2B7B1F9425FA1ECE002D3ECD /* LaunchScreen.storyboard in Resources */,
+				2B7B1F9125FA1ECE002D3ECD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B7B1F9825FA1ECE002D3ECD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B7B1FA325FA1ECE002D3ECD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D870EF4507EFF951C161AB1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Atrium-AtriumUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B881A81E81572E7BEAADA30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Atrium-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2BA246B625FB71F80061E41A /* Apollo CLI */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Apollo CLI";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --header=\"Authorization: Bearer 946aa446f96cd8940b08721e1274168a76bc15eb\" --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n#\"${SCRIPT_PATH}\"/run-bundled-codegen.sh schema:download --endpoint=\"https://api.github.com/graphql\" --header=\"Authorization: Bearer 946aa446f96cd8940b08721e1274168a76bc15eb\"\n";
+		};
+		DDDF722C8D953D8A7AF7DA8E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AtriumTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B7B1F7D25FA1ECD002D3ECD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B7B1FE525FA3EB3002D3ECD /* ProfileHeaderView.swift in Sources */,
+				2BC5776725FA49DB00913BCB /* RepositoryTileView.swift in Sources */,
+				2B7B1F8925FA1ECD002D3ECD /* ProfileViewController.swift in Sources */,
+				2BC5775725FA493000913BCB /* PinnedRepositoriesSectionView.swift in Sources */,
+				2B325F5525FE501D000F9D41 /* AppConstants.swift in Sources */,
+				2BC5776125FA498900913BCB /* StarredRepositoriesSectionView.swift in Sources */,
+				2B325F7F25FE83C5000F9D41 /* ProfileRetrieverDelegate.swift in Sources */,
+				2B820DBB25FBF567007DB2C5 /* API.swift in Sources */,
+				2B325F7A25FE7D46000F9D41 /* UIImageViewExtension.swift in Sources */,
+				2B820DE025FCD52C007DB2C5 /* ProfileViewControllerDelegate.swift in Sources */,
+				2B820DE525FCEBD3007DB2C5 /* SectionViewDelegate.swift in Sources */,
+				2B7B1F8525FA1ECD002D3ECD /* AppDelegate.swift in Sources */,
+				2B325F6C25FE5A99000F9D41 /* ProfileRetriever.swift in Sources */,
+				2B325F5025FE4E36000F9D41 /* UserDefaultsExtension.swift in Sources */,
+				2BFBFFEB25FAB5B80044E828 /* ProfileSectionHeaderView.swift in Sources */,
+				2B820DCA25FCCD73007DB2C5 /* ProfilePresenter.swift in Sources */,
+				2BC5775C25FA496100913BCB /* TopRepositoriesSectionView.swift in Sources */,
+				2BFBFFF225FAC9650044E828 /* RepositoryTileViewTopComponent.swift in Sources */,
+				2B7B1F8725FA1ECD002D3ECD /* SceneDelegate.swift in Sources */,
+				2B808F2225FB912900FDDE06 /* NetworkService.swift in Sources */,
+				2BFBFFF725FAC97F0044E828 /* RepositoryTileViewBottomComponent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B7B1F9625FA1ECE002D3ECD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B7B1F9F25FA1ECE002D3ECD /* AtriumTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B7B1FA125FA1ECE002D3ECD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B7B1FAA25FA1ECE002D3ECD /* AtriumUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B7B1F9C25FA1ECE002D3ECD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B7B1F8025FA1ECD002D3ECD /* Atrium */;
+			targetProxy = 2B7B1F9B25FA1ECE002D3ECD /* PBXContainerItemProxy */;
+		};
+		2B7B1FA725FA1ECE002D3ECD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B7B1F8025FA1ECD002D3ECD /* Atrium */;
+			targetProxy = 2B7B1FA625FA1ECE002D3ECD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2B7B1F9225FA1ECE002D3ECD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B7B1F9325FA1ECE002D3ECD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B7B1FAC25FA1ECE002D3ECD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B7B1FAD25FA1ECE002D3ECD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B7B1FAF25FA1ECE002D3ECD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0CFF807D919164D77F3C873 /* Pods-Atrium.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5XLWB6H4K8;
+				INFOPLIST_FILE = Atrium/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chinthaka.Atrium;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B7B1FB025FA1ECE002D3ECD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70BA3769CD20DD734824EEC0 /* Pods-Atrium.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5XLWB6H4K8;
+				INFOPLIST_FILE = Atrium/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chinthaka.Atrium;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2B7B1FB225FA1ECE002D3ECD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 313F9121A453BB07F49D80A0 /* Pods-AtriumTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5XLWB6H4K8;
+				INFOPLIST_FILE = AtriumTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chinthaka.AtriumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Atrium.app/Atrium";
+			};
+			name = Debug;
+		};
+		2B7B1FB325FA1ECE002D3ECD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2B009C960E3601D1122FD3C /* Pods-AtriumTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5XLWB6H4K8;
+				INFOPLIST_FILE = AtriumTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chinthaka.AtriumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Atrium.app/Atrium";
+			};
+			name = Release;
+		};
+		2B7B1FB525FA1ECE002D3ECD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B63E3A584B09D7A38D533DEA /* Pods-Atrium-AtriumUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5XLWB6H4K8;
+				INFOPLIST_FILE = AtriumUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chinthaka.AtriumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Atrium;
+			};
+			name = Debug;
+		};
+		2B7B1FB625FA1ECE002D3ECD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68050D6F0883879641832F35 /* Pods-Atrium-AtriumUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5XLWB6H4K8;
+				INFOPLIST_FILE = AtriumUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chinthaka.AtriumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Atrium;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B7B1F7C25FA1ECD002D3ECD /* Build configuration list for PBXProject "Atrium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B7B1FAC25FA1ECE002D3ECD /* Debug */,
+				2B7B1FAD25FA1ECE002D3ECD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B7B1FAE25FA1ECE002D3ECD /* Build configuration list for PBXNativeTarget "Atrium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B7B1FAF25FA1ECE002D3ECD /* Debug */,
+				2B7B1FB025FA1ECE002D3ECD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B7B1FB125FA1ECE002D3ECD /* Build configuration list for PBXNativeTarget "AtriumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B7B1FB225FA1ECE002D3ECD /* Debug */,
+				2B7B1FB325FA1ECE002D3ECD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B7B1FB425FA1ECE002D3ECD /* Build configuration list for PBXNativeTarget "AtriumUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B7B1FB525FA1ECE002D3ECD /* Debug */,
+				2B7B1FB625FA1ECE002D3ECD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2B820D9125FBDDD8007DB2C5 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.39.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2B820D9225FBDDD8007DB2C5 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B820D9125FBDDD8007DB2C5 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		2B820D9425FBDDD8007DB2C5 /* ApolloSQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B820D9125FBDDD8007DB2C5 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloSQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 2B7B1F7925FA1ECD002D3ECD /* Project object */;
+}

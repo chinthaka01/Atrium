@@ -1,0 +1,72 @@
+fragment ProfileDetails on User {
+    email
+    id
+    following {
+      totalCount
+    }
+    followers {
+      totalCount
+    }
+    avatarUrl
+    name
+    topRepositories(orderBy: {field: CREATED_AT, direction: ASC}, first: 10) {
+      edges {
+        node {
+          description
+          languages(orderBy: {field: SIZE, direction: ASC}, first: 1) {
+            edges {
+              node {
+                name
+              }
+            }
+          }
+          name
+          owner {
+            avatarUrl
+            id
+          }
+          stargazerCount
+        }
+      }
+    }
+    starredRepositories(first: 10, orderBy: {field: STARRED_AT, direction: ASC}) {
+      edges {
+        node {
+          description
+          languages(first: 1) {
+            edges {
+              node {
+                name
+              }
+            }
+          }
+          name
+          owner {
+            avatarUrl
+            id
+          }
+          stargazerCount
+        }
+      }
+    }
+    pinnedItems(first: 3) {
+      nodes {
+        ... on Repository {
+          name
+          description
+          languages(first: 1, orderBy: {field: SIZE, direction: ASC}) {
+            edges {
+              node {
+                name
+              }
+            }
+          }
+          owner {
+            avatarUrl
+            id
+          }
+          stargazerCount
+        }
+      }
+    }
+}
